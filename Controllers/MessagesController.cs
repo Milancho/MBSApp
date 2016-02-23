@@ -5,9 +5,12 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using MBSApp.Models;
+using System.Web.Http.Cors;
 
 namespace MBSApp.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
+
     public class MessagesController : ApiController
     {
         Message[] messages = new Message[]
